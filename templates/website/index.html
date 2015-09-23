@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    {% block title %}  <title>Home - Pixelicious Photography</title> {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name = "format-detection" content = "telephone=no" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <link rel="stylesheet" href="/static/css/bootstrap.css" >
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/camera.css">
+    
+	<script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jquery-migrate-1.2.1.js"></script>
+    <script src="/static/js/superfish.js"></script>
+    <script src="/static/js/jquery.mobilemenu.js"></script>
+    <script src="/static/js/jquery.easing.1.3.js"></script>
+    <script src="/static/js/jquery.ui.totop.js"></script>
+    <script src="/static/js/jquery.touchSwipe.min.js"></script>
+    <script src="/static/js/jquery.equalheights.js"></script>
+    
+         
+    <script src='/static/js/camera.js'></script>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+        <script src="/static/js/jquery.mobile.customized.min.js"></script>
+    <!--<![endif]-->
+    
+    <script>	
+        $(window).load( function(){	
+            
+        	   jQuery('.camera_wrap').camera();	 
+               
+        });
+    </script>
+    
+    
+    <!--[if lt IE 9]>
+    <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>  
+    <link rel="stylesheet" href="assets/tm/css/tm_docs.css" type="text/css" media="screen">
+    <script src="assets/assets/js/html5shiv.js"></script> 
+    <script src="assets/assets/js/respond.min.js"></script>
+
+  <![endif]-->
+</head>
+
+<body>
+<!--==============================header=================================-->
+<header id="header">
+      <div class="container">
+        <h1 class="navbar-brand navbar-brand_"><a href="index.html"><img alt="Grill point" src="/static/img/logo.png"></a></h1>
+      </div>
+      <div class="menuheader">
+          <div class="container">
+            <nav class="navbar navbar-default navbar-static-top tm_navbar" role="navigation">
+                <ul class="nav sf-menu">
+                  <li class="active"><a href="/">home</a>
+                    <!-- <ul>
+                      <li><img src="img/arrowup.png" alt=""><a href="#">info</a></li>
+                      <li><a href="#">profile</a></li>
+                      <li><a class="last" href="#">news</a>
+                        <ul>
+                           <li><a href="#">fresh</a></li>
+                           <li><a class="last" href="#">archive</a></li>                       
+                        </ul>
+                      </li>
+                    </ul> -->
+                  </li>
+                  <li><a href="/about_us">about us</a></li>
+                  <li><a href="/gallery">gallery</a></li>
+                 <!-- <li><a href="index-3.html">links</a></li> -->
+                  <li><a href="/contact_us">contact us</a></li>
+                 {% if not user.is_authenticated %}   <li class="pull-right"><a href="/login">login</a></li>{% else %} <li><a href="/personal_album">{{user}}'s Personal Album</a> </li> <li class="pull-right"><a href="/logout">logout</a></li>{% endif %}
+                </ul>
+            </nav>
+          </div>
+      </div>
+</header>
+<!--==============================content=================================-->
+{% block content %}
+<div id="content">
+
+    <!--==============================slider=================================-->
+    <div class="slider">
+        <div class="camera_wrap">
+          <div data-src="/static/img/picture1.jpg"></div>
+          <div data-src="/static/img/picture2.jpg"></div>
+          <div data-src="/static/img/picture3.jpg"></div>
+          <div data-src="/static/img/picture4.jpg"></div>
+        </div>
+    </div>
+    <!--==============================row1=================================-->
+    <div class="row_1">
+        <div class="container">
+            <p class="title1">Welcome to our website!</p>
+            <p class="title2">Are you looking for one of the best commercial photographer in Bilaspur, India? Specializing in people photography, male portfolio, female portfolio, jewellery photography, products photography, food photography, Wedding Photography etc. We have highly skilled technical team of commercial photographers; ensure that our service to you is the best in the industry. The proficiency of our photographs and photographers is second to none, please browse through our portfolio section to view that quality and style is so important to us.</p>
+            <a href="#" class="btn btn-default btn-lg btn1">more</a>
+        </div>
+    </div>
+    <!--==============================row2=================================-->
+    <div class="row_2">
+        <div class="container">
+            <div class="row">
+                <ul class="list1">
+                    <li class="col-lg-4 col-md-4 col-sm-4 listbox1">
+                        <div class="box1">
+                            <a href="#">
+                                <figure><img src="/static/img/page1_img1.jpg" alt=""></figure>
+                                <p>Women</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 listbox2">
+                        <div class="box2">
+                            <a href="#">
+                                <p>Men</p>
+                                <figure><img src="/static/img/page1_img2.jpg" alt=""></figure>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 listbox3">
+                        <div class="box3">
+                            <a href="#">
+                                <figure><img src="/static/img/page1_img3.jpg" alt=""></figure>
+                                <p>Children</p>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--==============================row3=================================-->
+    <div class="row_3">
+        <div class="container">
+            <div class="row">
+                <ul class="list3">
+                    <li class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="box4">
+                            <figure><img src="/static/img/thumb1.jpg" alt=""></figure>
+                            <div class="info1 maxheight">
+                                <p class="list3title1">Nature</p>
+                                <p class="list3title2">Explore the beauty of Nature</p>
+                                <p class="list3title3">How nature looks through our lenses</p>
+                                <a href="index-2.html" class="btn-link btn-link1">view more<span></span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="box4">
+                            <figure><img src="/static/img/thumb2.jpg" alt=""></figure>
+                            <div class="info1 maxheight">
+                                <p class="list3title1">Cities</p>
+                                <p class="list3title2">City photography</p>
+                                <p class="list3title3">How city looks through our lenses</p>
+                                <a href="index-2.html" class="btn-link btn-link1">view more<span></span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="box4">
+                            <figure><img src="/static/img/thumb3.jpg" alt=""></figure>
+                            <div class="info1 maxheight">
+                                <p class="list3title1">Portraits</p>
+                                <p class="list3title2">Portrait Gallery</p>
+                                <p class="list3title3"></p>
+                                <a href="index-2.html" class="btn-link btn-link1">view more<span></span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="box4">
+                            <figure><img src="/static/img/thumb4.jpg" alt=""></figure>
+                            <div class="info1 maxheight">
+                                <p class="list3title1">Fashion</p>
+                                <p class="list3title2">Gallery of Fashion Photography</p>
+                                <p class="list3title3"></p>
+                                <a href="index-2.html" class="btn-link btn-link1">view more<span></span></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--==============================row4=================================-->
+    <div class="row_4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 chef row4_col">
+                    <h2>About Me</h2>
+                    <figure><img src="/static/img/page1_img8.jpg" alt=""></figure>
+                    <p class="title3">A few words</p>
+                    <p>I like to capture the colors of life, heartfelt emotions of events, blissful natural gifts to human eye, So the moment could be revisited time and again else at times the memories remain but images are lost. </p>
+                    <p class="m_bot1">Hence I take this opportunity to express myself through my lens.</p>
+                    <a href="https://www.facebook.com/pixeliciousphotography9/info?tab=page_info" class="btn-link btn-link2">read more<span></span></a>
+                </div>
+                <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-3 col-md-3 col-sm-3 row4_col">
+                    <h2>Quick Links</h2>                        
+                    <ul class="list2">
+                        <li><a href="https://www.facebook.com/pixeliciousphotography9?fref=ts">Facebook Page</a></li>
+                        <li><a href="https://500px.com/pankpix">500px</a></li>
+                        <li><a href="http://photographers.canvera.com/north/chhattisgarh/bilaspur/pixelicious-photogaphy?a=showtab&t=1">Canvera Photobook</a></li>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=pixelicious.photography@yahoo.com">Email us</a></li>
+                        <li><a href="index-4.html">Location</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="index-2.html">Gallery</a></li>
+                        <li><a href="index-1.html">About us</a></li>
+                    </ul> 
+                </div>
+                <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-3 col-md-3 col-sm-3 locations row4_col">
+                    <h2>Locations</h2>
+                    <figure><img src="/static/img/smalllogo1.png" alt=""></figure>
+                    <p class="title4">Pixelicious Photography<br>Bilaspur<br>09039609093</p>
+                    <hr class="line1">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pixelicious.photography@yahoo.com" class="btn-link btn-link3" style="font-size:14px;"><span></span>pixelicious.photography@yahoo.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!--==============================footer=================================-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 footercol">
+                <ul class="social_icons clearfix">
+                     <li><a href="https://www.facebook.com/pixeliciousphotography9/timeline?ref=page_internal"><img src="/static/img/follow_icon1.png" alt=""></a></li>
+                     <li><a href="#"><img src="/static/img/follow_icon2.png" alt=""></a></li>
+                     <li><a href="#"><img src="/static/img/follow_icon3.png" alt=""></a></li>
+                     <li><a href="http://photographers.canvera.com/north/chhattisgarh/bilaspur/pixelicious-photogaphy?a=showtab&t=1"><img src="/static/img/follow_icon4.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footerlogo footercol">
+                <a class="smalllogo2 logo" href="index.html"><img src="/static/img/logofooter.png" alt=""></a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footercol">
+                <p class="footerpriv">&copy; 2015 &bull; <a class="privacylink" href="index-5.html">Privacy policy</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/tm-scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+{% extends "website/index.html" %}
+{% block title %} <title>Contact Us</title> {% endblock %}
+{% block content %}
+<div id="content">
+    <!--==============================row8=================================-->
+    <div class="row_8">
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 gmap">
+                      <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29580.15527047579!2d82.16769220339357!3d22.06797225171492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a280b117b9ab6a7%3A0xc6f3f89d9eac7caf!2sBilaspur%2C+Chhattisgarh!5e0!3m2!1sen!2sin!4v1435440731839"  frameborder="0" style="border:0" allowfullscreen></iframe></iframe></div>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 address">
+                        <h2>Postal Address</h2>
+                        <address>
+                            <div class="info">
+                                <strong>Pixelicious &nbsp; Photography</strong>
+                            	<p><span>City:</span>Bilaspur</p>
+                            	<p><span>Contact:</span>09039609093</p>
+                            	<p>E-mail: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pixelicious.photography@yahoo.com">pixelicious.photography@yahoo.com</a></p>
+                            </div>
+                        </address>
+                       <!-- <address class="m_top1">
+                            <div class="info">
+                                <strong>9867 Mill Road, Cambridge, MG09 99HT </strong>
+                            	<p><span>Telephone:</span> +1 959 603 6035</p>
+                            	<p><span>FAX:</span> +1 504 889 9898</p>
+                            	<p>E-mail: <a href="mailto:#">mail@demolink.org</a></p>
+                            </div>
+                        </address> -->
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 address">
+                        <h2>Contact Form</h2>
+                        <form id="contact-form" class="contact-form" action="submit/" method="post">
+                            {% csrf_token %}
+                          <div class="success"> Contact form submitted! <strong>We will be in touch soon.</strong> </div>
+                          <fieldset>
+                            <div class="coll-1">
+                              <div class="txt-form">Name<span>*</span></div>
+                              <label class="name">
+                                <input type="text" placeholder="Name*:" name="name" required><br>
+                                <span class="error">*This is not a valid name.</span> <span class="empty">*This field is required.</span> </label>
+                            </div>
+                            <div class="coll-2">
+                              <div class="txt-form">Email<span>:</span></div>
+                              <label class="email">
+                                <input type="email" placeholder="E-mail*:" name="email" required=""><br>
+                                <span class="error">*This is not a valid email address.</span> <span class="empty">*This field is required.</span> </label>
+                            </div>
+                            <div class="coll-3">
+                              <div class="txt-form">phone:</div>
+                              <label class="phone notRequired">
+                                <input type="number" placeholder="Phone:" name="phone" required><br>
+                                <span class="error">*This is not a valid phone number.</span> <span class="empty">*This field is required.</span> </label>
+                            </div>
+                            <div class="clear"></div>
+                            <div>
+                              <div class="txt-form">Comment<span>*</span></div>
+                              <label class="message">
+                                <textarea name="message">Message*:</textarea><br>
+                                <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
+                            </div>
+                            <div class="clear"></div>
+                          </fieldset>
+                          <div class="buttons-wrapper clearfix"><button class="btn-link btn-link2" type="submit">submit<span></span></button><strong>*REQUIRED FIELDS</strong></div>
+                        </form>
+                    </div>
+                 </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
