@@ -79,7 +79,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'shashikant1920@gmail.com'
-EMAIL_HOST_PASSWORD = 'rdfzilsiumbtovoi'
+EMAIL_HOST_PASSWORD = 'YOUR PASSWORD HERE'
 DEFAULT_FROM_EMAIL = 'Pankaj Pixelicious Photography'    #change this
 DEFAULT_TO_EMAIL = 'to email'
 
